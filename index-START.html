@@ -35,6 +35,7 @@
   </div>
 
 <script>
+
   const slider = document.querySelector('.items');
 
   let isDown = false;
@@ -47,20 +48,17 @@
     // console.log(e);
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft; 
-    // console.log(startX);
-    
-    
-  });
+  });//end
 
   slider.addEventListener('mouseleave', () => {
     isDown = false;
     slider.classList.remove('active');
-  });
+  });//end
 
   slider.addEventListener('mouseup', () => {
     isDown = false;
     slider.classList.remove('active');
-  });
+  });//end
 
   slider.addEventListener('mousemove', (e) => {
     if (!isDown) return; //stops function if mouse is up
@@ -74,13 +72,7 @@
     const walk = (x - startX) * 3; //faster tracking than ^^^^
     console.log({walk});
     slider.scrollLeft = scrollLeft - walk; //original setting - difference (walk)
-
-    
-    
-    
-    
-  });
-
+  });//end
 
 </script>
 
