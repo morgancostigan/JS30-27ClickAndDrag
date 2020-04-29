@@ -35,7 +35,7 @@
   </div>
 
 <script>
-  const slider = document.querySelector('items');
+  const slider = document.querySelector('.items');
 
   let isDown = false;
   let startX;
@@ -54,7 +54,11 @@
   });
 
   slider.addEventListener('mousemove', () => {
-
+    if (!isDown) return; //stops function if mouse is up
+    console.log(isDown);
+    
+    // console.log('Ki raro!');
+    
   });
 
 
