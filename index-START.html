@@ -62,11 +62,16 @@
     slider.classList.remove('active');
   });
 
-  slider.addEventListener('mousemove', () => {
+  slider.addEventListener('mousemove', (e) => {
     if (!isDown) return; //stops function if mouse is up
     // console.log(isDown);
     // console.log('Ki raro!');
     // console.log(startX);
+    e.preventDefault(); //prevents glitches like text selection, etc 
+    const x = e.pageX - slider.offsetLeft;
+    console.log({x, startX}); //put in object to show keys and values 
+    const walk = x - startX; //tracks the movement of x
+    
     
     
   });
