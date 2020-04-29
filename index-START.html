@@ -70,9 +70,11 @@
     e.preventDefault(); //prevents glitches like text selection, etc 
     const x = e.pageX - slider.offsetLeft;
     console.log({x, startX}); //put in object to show keys and values 
-    const walk = x - startX; //tracks the movement of x
+    // const walk = x - startX; //tracks the movement of x, the difference
+    const walk = (x - startX) * 3; //faster tracking than ^^^^
     console.log({walk});
-    slider.scrollLeft = scrollLeft - walk;
+    slider.scrollLeft = scrollLeft - walk; //original setting - difference (walk)
+
     
     
     
