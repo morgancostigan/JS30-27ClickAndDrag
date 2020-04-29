@@ -44,9 +44,10 @@
   slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
-    console.log(e);
+    // console.log(e);
     startX = e.pageX - slider.offsetLeft;
-    console.log(startX);
+    scrollLeft = slider.scrollLeft; 
+    // console.log(startX);
     
     
   });
@@ -65,7 +66,7 @@
     if (!isDown) return; //stops function if mouse is up
     // console.log(isDown);
     // console.log('Ki raro!');
-    console.log(startX);
+    // console.log(startX);
     
     
   });
