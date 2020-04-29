@@ -71,6 +71,9 @@
     const x = e.pageX - slider.offsetLeft;
     console.log({x, startX}); //put in object to show keys and values 
     const walk = x - startX; //tracks the movement of x
+    console.log({walk});
+    slider.scrollLeft = scrollLeft - walk;
+    
     
     
     
